@@ -233,21 +233,20 @@ body{
     top: 76.5%;
     left: 76.5%;
     transition: 0.5s ease-in-out;
+    overflow-x: scroll;
 }
 .experience-opened {
+    width: 100%;
     z-index: -1;
     background-color:var(--main-color);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: nowrap;
     align-items: center;
-    flex-basis: var(--square-width);
     font-size: 0;
     transition: 0.5s ease-in-out;
-    padding: 0 calc(var(--viewport-unit) * 2);
     line-height: 1.2;
 }
-
 .experience-closed {
     position: absolute;
     background-color:var(--main-color);
@@ -259,6 +258,7 @@ body{
     transition-delay: 0.4s;
 }
 .worked__place {
+    flex: 0 0 calc(var(--viewport-unit) * 78);
     font-weight: 500;
     background-color: var(--backside-color);
     padding: var(--viewport-unit);
