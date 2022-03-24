@@ -258,10 +258,10 @@ body{
     transition-delay: 0.4s;
 }
 .worked__place {
-    flex: 0 0 calc(var(--viewport-unit) * 78);
+    flex: 0 0 calc(var(--viewport-unit) * 76);
     font-weight: 500;
     background-color: var(--backside-color);
-    padding: var(--viewport-unit);
+    padding: 0 calc(var(--viewport-unit) * 2);
 }
 .worked__place__header {
     display: flex;
