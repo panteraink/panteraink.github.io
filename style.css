@@ -233,16 +233,12 @@ body{
     top: 76.5%;
     left: 76.5%;
     transition: 0.5s ease-in-out;
-    overflow-x: scroll;
+    overflow: hidden;
 }
 .experience-opened {
     width: 100%;
     z-index: -1;
     background-color:var(--main-color);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
     font-size: 0;
     transition: 0.5s ease-in-out;
     line-height: 1.2;
@@ -257,18 +253,78 @@ body{
     transition: 0.1s ease-in-out;
     transition-delay: 0.4s;
 }
+.experience-opened__button__previous, .experience-opened__button__next {
+    position: absolute;
+    bottom: 5%;
+    height: 10%;
+    width: 30%;
+    border-radius: 5%;
+    border: 3px solid #fff;
+    background-color: transparent;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+.experience-opened__button__previous{
+    left: 5%;
+}
+.experience-opened__button__next {
+    right: 5%;
+}
+.experience-opened__button__previous::after, .experience-opened__button__next::after{
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 45%;
+    top: 50%;
+    left: 50%;
+    border-right: 2px solid #fff;
+    border-bottom:  2px solid #fff;
+    transform: translate(-25%, -50%) rotate(135deg);
+}
+.experience-opened__button__next::after{
+    transform: translate(-75%, -50%) rotate(-45deg);
+}
+.experience-opened__button__previous:hover, .experience-opened__button__next:hover{
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.inactive-button{
+    display: none;
+}
 .worked__place {
-    flex: 0 0 calc(var(--viewport-unit) * 76);
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
     font-weight: 500;
     background-color: var(--backside-color);
-    padding: 0 calc(var(--viewport-unit) * 2);
+    padding: 0 calc(var(--viewport-unit) * 4);
 }
 .worked__place__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 0 var(--viewport-unit);
+    margin: 0 0 calc(var(--viewport-unit) * 2);
     font-weight: 300;
+}
+.slide-previous{
+    position: absolute;
+    left:-100%;
+    top: 0;
+}
+.slide-next{
+    position: absolute;
+    left: 100%;
+    top:0;
+}
+.slide-active{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.worked__place__header__dates {
+}
+.worked__place__header__organization {
 }
 .worked__place__details {
     display: flex;
