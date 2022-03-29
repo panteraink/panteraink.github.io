@@ -2,37 +2,59 @@
 
 //Функция инициализации слайдеров
 const slidesInit = () =>{
-    for (const btn of buttonPrevious) {
-        btn.classList.toggle('inactive-button');
-    };
+    buttonPrevious.classList.toggle('inactive-button');
     for (const slds of slides) {
         slds.classList.toggle('slide-next');
     };
     slides[0].classList.toggle('slide-active');
 };
+//Функция следующий слайд
 const slideNext = () => {
-    slides[slideNumber].classList.toggle('slide-previous');
-    slides[slideNumber + 1].classList.toggle('slide-previous');
+    slides[slideNumber].classList.toggle('slide-active');
+    slides[slideNumber].classList.add('slide-previous');
+    slides[slideNumber].classList.remove('slide-next');
+    slides[slideNumber + 1].classList.toggle('slide-active');
+    buttonPrevious.classList.remove('inactive-button');
     ++slideNumber;
-    if (!slides[slideNumber + 1]){
-        buttonNext.classList.toggle('inactive-button');
-    }
+    if (slides[slideNumber + 1]){
+        buttonNext.classList.remove('inactive-button');
+    } else if (!slides[slideNumber + 1]) {
+        buttonNext.classList.add('inactive-button');
+    };
 };
-const slidePrevious = () => {};
+//Функция предыдущий слайд
+const slidePrevious = () => {
+    slides[slideNumber].classList.toggle('slide-active');
+    slides[slideNumber].classList.add('slide-next');
+    slides[slideNumber].classList.remove('slide-previous');
+    slides[slideNumber - 1].classList.toggle('slide-active');
+    buttonNext.classList.remove('inactive-button');
+    --slideNumber;
+    if (slides[slideNumber - 1]){
+        buttonPrevious.classList.remove('inactive-button');
+    } else if (!slides[slideNumber - 1]) {
+        buttonPrevious.classList.add('inactive-button');
+    };
+};
 
 const sliders = document.querySelectorAll('.slider');
 const slides = document.querySelectorAll('.slide');
-const buttonNext = document.querySelectorAll('.slider-button-next');
-const buttonPrevious = document.querySelectorAll('.slider-button-previous');
+const buttonNext = document.querySelector('.slider-button-next');
+const buttonPrevious = document.querySelector('.slider-button-previous');
+const buttonsExpanding = document.querySelectorAll('.button-expanding');
 
 //Иницализация кнопок слайдера
 let slideNumber = 0;
 slidesInit();
 
 //Вешаем listener на внутренний контейнер
-let container = document.querySelector('.inner-wrapper');
+const container = document.querySelector('.outer-wrapper');
 container.addEventListener('click', (event) => {
-    if (event.target.closest('.button-rotating')) {
+    if (event.target.closest('.slider-button-next')) {
+        slideNext()
+    } else if (event.target.closest('.slider-button-previous')) {
+        slidePrevious()
+    } else if (event.target.closest('.button-rotating')) {
         event.target.closest('.button-rotating').classList.toggle('rotated');
     } else if (event.target.closest('.button-expanding')) {
         const obj = event.target.closest('.button-expanding');
@@ -47,26 +69,13 @@ container.addEventListener('click', (event) => {
             }, 500);
             obj.dataset.expandingButton = "closed"
         }
+    } else if (event.target.closest('.outer-wrapper')) {
+        for (const obj of buttonsExpanding) {
+            obj.classList.remove('expanded');
+            setTimeout(() => {
+                obj.style.zIndex = ''
+            }, 500);
+            obj.dataset.expandingButton = "closed"
+        }
     }
 });
-
-/*
-+ slides-init
-    + button previous inactive
-    + for each slides class = slide-next
-    + slides[0] class .slide-active
-slide-next
-    slides[n] classlist slide-previous
-    slides[n+1] classlist slide-active
-    n =+ n;
-    if slides[n+1] === null {
-        button next deactivate
-    };
-slide-before
-    slide[n] classlist slide-next
-    slide[n-1] classlist slide-active
-    n =- n;
-    if slides[n-1] === null {
-        button previous deactivate
-    };
-*/
