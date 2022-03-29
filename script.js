@@ -36,7 +36,20 @@ const slidePrevious = () => {
         buttonPrevious.classList.add('inactive-button');
     };
 };
-
+//Функция развертывания
+const expandingButtonExpand = (o) => {
+    o.style.zIndex = '100';
+    o.classList.toggle('expanded');
+    o.dataset.expandingButton = "expanded";
+};
+//Функция свертывания
+const expandingButtonCollapse = (o) => {
+    o.classList.toggle('expanded');
+    setTimeout(() => {
+        o.style.zIndex = ''
+    }, 500);
+    o.dataset.expandingButton = "closed"
+};
 const sliders = document.querySelectorAll('.slider');
 const slides = document.querySelectorAll('.slide');
 const buttonNext = document.querySelector('.slider-button-next');
@@ -59,23 +72,15 @@ container.addEventListener('click', (event) => {
     } else if (event.target.closest('.button-expanding')) {
         const obj = event.target.closest('.button-expanding');
         if (obj.dataset.expandingButton === "closed") {
-            obj.style.zIndex = '100';
-            obj.classList.toggle('expanded');
-            obj.dataset.expandingButton = "expanded";
+            expandingButtonExpand(obj);
         } else if (obj.dataset.expandingButton === "expanded") {
-            obj.classList.toggle('expanded');
-            setTimeout(() => {
-                obj.style.zIndex = ''
-            }, 500);
-            obj.dataset.expandingButton = "closed"
+            expandingButtonCollapse(obj);
         }
     } else if (event.target.closest('.outer-wrapper')) {
         for (const obj of buttonsExpanding) {
-            obj.classList.remove('expanded');
-            setTimeout(() => {
-                obj.style.zIndex = ''
-            }, 500);
-            obj.dataset.expandingButton = "closed"
+            if (obj.dataset.expandingButton === "expanded") {
+                expandingButtonCollapse(obj);
+            }
         }
     }
 });
