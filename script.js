@@ -3,10 +3,20 @@
 //Функция инициализации слайдеров
 const slidesInit = () =>{
     buttonPrevious.classList.toggle('inactive-button');
-    for (const slds of slides) {
-        slds.classList.toggle('slide-next');
+    for (const i of slides) {
+        i.classList.toggle('slide-next');
     };
     slides[0].classList.toggle('slide-active');
+    for (const i of sliders) {
+        i.dataset.slideNumber = 0; 
+    }
+};
+// Инициализация слайдеров вне общего обработчика клика
+const slidersInit = () => {
+    const s = document.querySelectorAll('.slider');
+    for (const i of s) {
+        const btnNext = i.querySelector('.slider-button-next');
+    }
 };
 //Функция следующий слайд
 const slideNext = () => {
