@@ -11,13 +11,6 @@ const slidesInit = () =>{
         i.dataset.slideNumber = 0; 
     }
 };
-// Инициализация слайдеров вне общего обработчика клика
-const slidersInit = () => {
-    const s = document.querySelectorAll('.slider');
-    for (const i of s) {
-        const btnNext = i.querySelector('.slider-button-next');
-    }
-};
 //Функция следующий слайд
 const slideNext = () => {
     slides[slideNumber].classList.toggle('slide-active');
