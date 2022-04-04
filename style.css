@@ -100,21 +100,28 @@ body{
     height: 23.5%;
     overflow: hidden;
 }
-.name:hover > .name_image {
+.name:active > .name_image {
     top: 0;
-    
 }
 .name_image{
     position: absolute;
     height: 100%;
     top: 100%;
     margin: 0 auto;
-    transition: 0.8s top ease-in-out;
+    transition: 0.3s top ease-in-out;
 }
 .name_image > img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+@media (any-hover: hover) {
+    .name:hover > .name_image {
+        top: 0;
+    }
+    .name_image {
+        transition: 0.8s top ease-in-out;
+    }
 }
 .inner-wrapper-education{
     position: absolute;
