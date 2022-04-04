@@ -121,10 +121,14 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    font-size: var(--small-fs);
+    font-size: calc(var(--small-fs) * 1.2);
     text-align: center;
     transform: rotateY(180deg) translateZ(2vh);
     background-color: var(--backside-color);
+}
+.works-back > div:last-child {
+    font-size: calc(var(--small-fs) * 0.8);
+    text-decoration: underline;
 }
 .works-back img {
     width: 100%;
@@ -169,13 +173,20 @@ body{
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    font-size: var(--small-fs);
+    font-size: calc(var(--small-fs) * 0.8);
     text-align: center;
     transform: rotateY(180deg) translateZ(calc(var(--viewport-unit) * 2));
     background-color: var(--backside-color);
+}
+.skills-back__hard > ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
 }
 .skills-front {
     position: absolute;
@@ -208,9 +219,9 @@ body{
     height: 23.5%;
     width: 23.5%;
     background-color: transparent;
-    transition: all 0.5s ease-in-out;
+    /*transition: all 0.5s ease-in-out;
     transform-style: preserve-3d;
-    transform: translateZ(-2vh);
+    transform: translateZ(-2vh);*/
     box-shadow: none;
 }
 .contacts-back{
@@ -243,9 +254,10 @@ body{
     align-items: center;
     font-size: calc(var(--small-fs) * 0.8);
     text-align: center;
-    background-color: var(--main-color);
+    text-shadow: calc(var(--viewport-unit) * 0.6) calc(var(--viewport-unit) * 0.6) calc(var(--viewport-unit) * 2) var(--shadow-color);
+    /*background-color: var(--main-color);
     transform: translateZ(2vh);
-    box-shadow: 0.1vw 0.1vw 0.2vw var(--shadow-color);
+    box-shadow: 0.1vw 0.1vw 0.2vw var(--shadow-color);*/
 }
 .contacts-front > div{
     display: flex;
@@ -307,6 +319,11 @@ body{
 }
 .about__opened__text div:last-child {
     text-align: right;
+}
+.about__opened__text__soft > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 .about-closed {
     width: 100%;
