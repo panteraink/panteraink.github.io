@@ -282,6 +282,9 @@ body{
     transform: translateZ(2vh);
     box-shadow: 0.1vw 0.1vw 0.2vw var(--shadow-color);*/
 }
+.contacts-front a {
+    text-decoration: underline;
+}
 .contacts-front > div{
     display: flex;
     flex-direction: column;
