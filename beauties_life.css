@@ -38,6 +38,7 @@ body{
     top: 0;
     left: 0;
     width: 10%;
+    min-width: 100px;
     opacity: 0.5;
 }
 .back-button div{
@@ -45,9 +46,10 @@ body{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1vw;
     line-height: 26px;
     letter-spacing: -0.3px;
+    text-align: center;
     color: var(--reset-color);
     background-color: var(--text-caption);
 }
