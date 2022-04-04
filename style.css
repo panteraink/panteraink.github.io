@@ -254,7 +254,7 @@ body{
     align-items: center;
     font-size: calc(var(--small-fs) * 0.8);
     text-align: center;
-    text-shadow: calc(var(--viewport-unit) * 0.6) calc(var(--viewport-unit) * 0.6) calc(var(--viewport-unit) * 2) var(--shadow-color);
+    text-shadow: calc(var(--viewport-unit) * 1.2) calc(var(--viewport-unit) * 0.6) calc(var(--viewport-unit) * 2.5) var(--shadow-color);
     /*background-color: var(--main-color);
     transform: translateZ(2vh);
     box-shadow: 0.1vw 0.1vw 0.2vw var(--shadow-color);*/
