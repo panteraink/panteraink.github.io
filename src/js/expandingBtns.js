@@ -1,6 +1,6 @@
 'use strict'
 
-export default expandingButtonsActivate = () => {
+export const expandingButtonsActivate = () => {
     const buttonsExpanding = document.querySelectorAll('.button-expanding');
     const container = document.querySelector('.outer-wrapper');
     const expandingButtonExpand = (o) => {

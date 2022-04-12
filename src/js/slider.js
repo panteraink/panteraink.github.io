@@ -1,6 +1,6 @@
 'use strict'
 
-export default slidersActivate = () => {
+export const slidersActivate = () => {
     const sliders = document.querySelectorAll('.slider');
     for (const slider of sliders) {
         const slides = slider.querySelectorAll('.slide');
