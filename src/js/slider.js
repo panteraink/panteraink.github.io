@@ -1,6 +1,6 @@
 'use strict'
 
-export const slidersActivate = () => {
+const slidersActivate = () => {
     const sliders = document.querySelectorAll('.slider');
     for (const slider of sliders) {
         const slides = slider.querySelectorAll('.slide');
@@ -51,3 +51,4 @@ export const slidersActivate = () => {
     }
    
 };
+export {slidersActivate}

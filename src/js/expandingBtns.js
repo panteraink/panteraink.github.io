@@ -1,6 +1,6 @@
 'use strict'
 
-export const expandingButtonsActivate = () => {
+const expandingButtonsActivate = () => {
     const buttonsExpanding = document.querySelectorAll('.button-expanding');
     const container = document.querySelector('.outer-wrapper');
     const expandingButtonExpand = (o) => {
@@ -34,3 +34,4 @@ export const expandingButtonsActivate = () => {
         }
     });
 };
+export {expandingButtonsActivate}

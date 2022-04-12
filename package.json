@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "view": "npx parcel index.html",
+    "view": "npx parcel ./src/index.html",
     "build": "parcel build ./src/index.html --dist-dir build",
     "buildHere": "parcel build ./src/index.html --dist-dir ."
   },
