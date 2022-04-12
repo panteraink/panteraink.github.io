@@ -1,7 +1,7 @@
 "use strict";
 
-import './js/slider';
-import './js/expandingBtns'
+import './js/slider.js'
+import './js/expandingBtns.js'
 
 if (window.matchMedia("(any-hover: none)").matches){
     const nameBlock = document.querySelector('.name');
