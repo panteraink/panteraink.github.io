@@ -100,23 +100,12 @@ body{
     height: 23.5%;
     overflow: hidden;
 }
-/*.name:active > .name_image {
-    top: 0;
-}*/
 .name_image{
     position: absolute;
     height: 100%;
     top: 100%;
     margin: 0 auto;
     transition: 0.3s top ease-in-out;
-}
-.name_image > img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-.name_image_up {
-    top: 0;
 }
 @media (any-hover: hover) {
     .name:hover > .name_image {
@@ -125,6 +114,14 @@ body{
     .name_image {
         transition: 0.8s top ease-in-out;
     }
+}
+.name_image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.name_image_up {
+    top: 0;
 }
 .inner-wrapper-education{
     position: absolute;
@@ -187,6 +184,7 @@ body{
     background-color: var(--main-color);
 }
 .skills {
+    box-sizing: border-box;
     position: absolute;
     width: 49%;
     height: 49%;
@@ -196,10 +194,10 @@ body{
     transition: all 0.5s ease-in-out;
     transform-style: preserve-3d;
     transform: translateZ(calc(var(--viewport-unit) * -2));
-    box-shadow: none;
-    box-sizing: border-box;
+    box-shadow: .2vw .2vw .5vw var(--shadow-color);
 }
 .skills-back {
+    box-sizing: border-box;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -213,14 +211,17 @@ body{
     background-color: var(--backside-color);
     cursor: auto;
 }
-.skills-back__hard > ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 2;
+.skills-back > ul {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    line-height: 1.5;
+    padding: calc(var(--viewport-unit) * 2) 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, auto);
 }
 .skills-front {
+    box-sizing: border-box;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -231,11 +232,6 @@ body{
     text-align: center;
     background-color: var(--main-color);
     transform: translateZ(2vh);
-    box-shadow: 0.1vw 0.1vw 0.2vw var(--shadow-color);
-}
-.skills-back > * {
-    line-height: 1.5;
-    padding: 0 calc(var(--viewport-unit) * 2) 0;
 }
 .skills__side{
     position: absolute;
