@@ -100,9 +100,9 @@ body{
     height: 23.5%;
     overflow: hidden;
 }
-.name:active > .name_image {
+/*.name:active > .name_image {
     top: 0;
-}
+}*/
 .name_image{
     position: absolute;
     height: 100%;
@@ -114,6 +114,9 @@ body{
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+.name_image_up {
+    top: 0;
 }
 @media (any-hover: hover) {
     .name:hover > .name_image {
