@@ -33,12 +33,8 @@
                     <div class="about-closed">Обо мне</div>
                 </div>
                 <div class="big-rectangle works button-rotating">
-                    <div class="works-back">
-                        <div>Адаптивный лендинг</div>
-                        <div><a href="./beautiesLife.html"><img src="./assets/Cover.jpg" alt="Обложка макета"></a></div>
-                        <div>
-                            <a href="https://www.figma.com/file/hlGtAlnTJLrILDlmU8PezY/Website-Landing-Page-for-BeautiesLife-(Community)?node-id=1506%3A315">Макет в Figma</a>
-                        </div>
+                    <div class="works-back slider" data-slider-index="2">
+                        
                     </div>
                     <div class="works-front"><div>Работы</div></div>
                     <div class="works-side"></div>
@@ -92,64 +88,16 @@
                     </div>
                     <div class="education-closed">Образование</div>
                 </div>
-                <div data-expanding-button="closed" class="small-rectangle experience button-expanding slider">
-                    <div class="experience-opened">
-                        <div class="worked__place slide">
-                            <div class="worked__place__header">
-                                <div class="worked__place__header__dates">Июнь 2014 - Июль 2021</div>
-                                <div class="worked__place__header__organization">ООО &#171;Форвард&#187;</div>
-                            </div>
-                            <div class="worked__place__details">
-                                <div class="worked__place__details__position">Оператор допечатной подготовки</div>
-                                <div class="worked__place__details__duties">
-                                    <span>Должностные обязанности:</span> <ul>
-                                        <li>Печать на ЦПМ Ricoh C7100X, обслуживание и ремонт ЦПМ, заказ запчастей.</li>
-                                        <li>Работа на СТР Heidelberg Suprasetter A52.</li>
-                                        <li>Обслуживание и ремонт проектора, вывод печатных форм.</li>
-                                        <li>Обслуживание и ремонт проявочного процессора Glunz & Jensen Raptor Pro 85T.</li>
-                                        <li>Работа на режущем плоттере Graphtec CE6000-40 Plus.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="worked__place slide">
-                            <div class="worked__place__header">
-                                <div class="worked__place__header__dates">Ноябрь 2012 - Май 2014 </div>
-                                <div class="worked__place__header__organization">ООО &#171;Областная типография &#8470;1&#187;</div>
-                            </div>
-                            <div class="worked__place__details">
-                                <div class="worked__place__details__position">Оператор CTP</div>
-                                <div class="worked__place__details__duties"><span>Должностные обязанности:</span> Вывод печатных форм, обслуживание СТР Heidelberg и проявочного процессора.</div>
-                            </div>
-                        </div>
-                        <div class="worked__place slide">
-                            <div class="worked__place__header">
-                                <div class="worked__place__header__dates">Август 2011 - Март 2012 </div>
-                                <div class="worked__place__header__organization">УК ГК &#171;Формула развития&#187;</div>
-                            </div>
-                            <div class="worked__place__details">
-                                <div class="worked__place__details__position">Помощник системного администратора</div>
-                                <div class="worked__place__details__duties"><span>Должностные обязанности:</span> Администрирование почтового сервера, Active Directory, VMware, поддержка пользователей, ремонт ПК, ремонт оргтехники, настройка сетевого оборудования, прокладка СКС.</div>
-                            </div>
-                        </div>
-                        <div class="worked__place slide">
-                            <div class="worked__place__header">
-                                <div class="worked__place__header__dates">Июль 2010 - Январь 2011</div>
-                                <div class="worked__place__header__organization">ЗАО &#171;Сиброн-Телеком&#187;</div>
-                            </div>
-                            <div class="worked__place__details">
-                                <div class="worked__place__details__position">Оператор call центра</div>
-                                <div class="worked__place__details__duties"><span>Должностные обязанности:</span> Прием и регистрация звонков, помощь пользователям по телефону, консультация клиентов, мониторинг сети, регистрация аварий </div>
-                            </div>
-                        </div>
-                        <div class="experience-opened__button__previous slider-button-previous"></div>
-                        <div class="experience-opened__button__next slider-button-next"></div>
+                <div data-expanding-button="closed" class="small-rectangle experience button-expanding">
+                    <div class="experience-opened slider" data-slider-index="1">
                     </div>
                     <div class="experience-closed">Опыт работы</div>
                 </div>
             </div>
         </div>
     </div>
-    <script type="module" src="script.js"></script>
+    <script src="js/slider_plugin.js"></script>
+    <script src="js/expandingBtns.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

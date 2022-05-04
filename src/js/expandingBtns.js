@@ -34,4 +34,3 @@ const expandingButtonsActivate = () => {
         }
     });
 };
-export {expandingButtonsActivate}

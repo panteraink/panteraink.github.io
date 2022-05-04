@@ -7,8 +7,11 @@ const slidersActivate = () => {
         const buttonNext = slider.querySelector('.slider-button-next');
         const buttonPrevious = slider.querySelector('.slider-button-previous');
         
-        if (slides <= 1) {
-            //Напиши что делать если один слайд, если слайдов нет, то нахуй continue    
+        if (slides.length === 0) continue
+        if (slides.length === 1) {
+            slides[0].classList.add('slide-active');
+            buttonPrevious?.classList.toggle('inactive-button');
+            buttonNext?.classList.toggle('inactive-button');
         }
         for (const i of slides) {
             i.classList.add('slide-next');
@@ -51,4 +54,3 @@ const slidersActivate = () => {
     }
    
 };
-export {slidersActivate}
