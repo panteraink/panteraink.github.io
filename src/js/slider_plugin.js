@@ -1,8 +1,8 @@
-'use strict'
+'use strict';
 
 const plg = {};
 
-plg.sliderCreate = ({containerSelector, content, buttonsShow, slidesClass, buttonsClass, containerClass, slidesReverseOrder}) => {
+plg.sliderCreate = ({containerSelector, content, buttonsShow = true, slidesClass, buttonsClass, containerClass, slidesReverseOrder = false}) => {
     let slideDirection = 'forward'
     let slideCount = content.length
     let slideNumber = 0;
@@ -38,7 +38,7 @@ plg.sliderCreate = ({containerSelector, content, buttonsShow, slidesClass, butto
         return {bPrevious, bNext}
     }
     
-    const containers = document.querySelectorAll(containerSelector)ж
+    const containers = document.querySelectorAll(containerSelector);
 
     if (containers.length !== 1) {
         throw new Error('Not unique identificator')
