@@ -75,5 +75,3 @@ const slidersArray = [
 ]
 
 const readySlider = slidersArray.slice(0).map(plg.sliderCreate)
-
-//const sTimer = s.sliderTimer(1000)

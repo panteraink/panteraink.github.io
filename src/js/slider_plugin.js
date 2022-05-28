@@ -152,14 +152,3 @@ plg.sliderCreate = ({containerSelector, content, buttonsShow, slidesClass, butto
         container
     }
 };
-
-
-
-/*
-метод stopSlider, startSlider, sliderInterval +
-параметр withoutButtons+
-порядок слайдов+
-передавать класс кнопочек, слайдер-контейнера и слайдов+
-создавать слайды процедурно +
-слайд с ошибкой ?
-*/
