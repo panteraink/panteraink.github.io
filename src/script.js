@@ -59,12 +59,17 @@ const slidersArray = [
         </div>`
     ]},
     {containerSelector: '[data-slider-index="2"]',
-    buttonsShow: false,
+    buttonsShow: true,
     content: [
         `<div>Адаптивный лендинг</div>
-        <div><a href="./beautiesLife.html"><img src="src/assets/Cover.jpg" alt="Обложка макета"></a></div>
+        <div><a href="./beautiesLife.html"><img src="Cover.jpg" alt="Обложка макета"></a></div>
         <div>
             <a href="https://www.figma.com/file/hlGtAlnTJLrILDlmU8PezY/Website-Landing-Page-for-BeautiesLife-(Community)?node-id=1506%3A315">Макет в Figma</a>
+        </div>`,
+        `<div>Плагин создающий слайдеры на странице</div>
+        <div><a href="https://github.com/panteraink/sliderPlugin"><img src="sliderPlugin.png" alt="Слайдер на GitHub"></a></div>
+        <div>
+            <a href="https://github.com/panteraink/sliderPlugin">Плагин на GitHub</a>
         </div>`
     ]}
 ]

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/panteraink/panteraink.github.io#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.4.1",
     "parcel": "^2.4.1"
   }
 }

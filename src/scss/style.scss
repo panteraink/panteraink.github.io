@@ -1,18 +1,6 @@
-*{padding: 0;margin: 0;border: 0;}
-*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-nav,footer,header,aside{display: block;}
-html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
-input,button,textarea{font-family:inherit;}
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner{padding:0;border:0;}
-a,a:visited{text-decoration: none;color: inherit;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+@use 'reset';
+@use 'slider';
+
 /*
     Размеры маленького тайла - 23.5%, большого - 49%, все тайлы квардратные, гэп - 2%.
 */
@@ -145,6 +133,7 @@ body{
     height: 100%;
     transform: rotateY(180deg) translateZ(2vh);
     background-color: var(--backside-color);
+    overflow: hidden;
     cursor: auto;
 }
 .works-back > .slide {
@@ -152,6 +141,7 @@ body{
     width: 100%;
     height: 100%;
     padding: 0 calc(var(--viewport-unit) * 2);
+    padding-bottom: 15%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -161,7 +151,7 @@ body{
     background-color: var(--backside-color);
     cursor: auto;
 }
-.works-back > a {
+.works-back a {
     font-size: calc(var(--small-fs) * 0.8);
     text-decoration: underline;
 }
@@ -440,63 +430,6 @@ body{
     align-items: center;
     z-index: inherit;
     transition: z-index 0.05s 0.45s;
-}
-/*.experience-opened__button__previous, .experience-opened__button__next*/
-.slider-button-previous, .slider-button-next {
-    position: absolute;
-    bottom: 5%;
-    height: 10%;
-    width: 30%;
-    border-radius: 5%;
-    border: 3px solid var(--main-color);
-    background-color: transparent;
-    opacity: 0.6;
-    transition: opacity 0.3s;
-    cursor: pointer;
-}
-.slider-button-previous{
-    left: 5%;
-}
-.slider-button-next {
-    right: 5%;
-}
-.slider-button-previous::after, .slider-button-next::after{
-    content: "";
-    position: absolute;
-    width: 15%;
-    height: 45%;
-    top: 50%;
-    left: 50%;
-    border-right: 2px solid var(--main-color);
-    border-bottom:  2px solid var(--main-color);
-    transform: translate(-25%, -50%) rotate(135deg);
-}
-.slider-button-next::after{
-    transform: translate(-75%, -50%) rotate(-45deg);
-}
-.slider-button-previous:hover, .slider-button-next:hover{
-    opacity: 1;
-    transition: opacity 0.3s;
-}
-.inactive-button{
-    display: none;
-}
-.slide-previous{
-    position: absolute;
-    top: 0;
-    left:-100%;
-    transition: left 0.5s;
-}
-.slide-next{
-    position: absolute;
-    top: 0;
-    left: 100%;
-    transition: left 0.5s;
-}
-.slide-active{
-    position: relative;
-    left: 0;
-    transition: left 0.5s;
 }
 .education{
     position: absolute;

@@ -2,8 +2,6 @@
 
 const plg = {};
 
-plg.slider = () => {};
-
 plg.sliderCreate = ({containerSelector, content, buttonsShow, slidesClass, buttonsClass, containerClass, slidesReverseOrder}) => {
     let slideDirection = 'forward'
     let slideCount = content.length
@@ -43,7 +41,7 @@ plg.sliderCreate = ({containerSelector, content, buttonsShow, slidesClass, butto
     const containers = document.querySelectorAll(containerSelector)ж
 
     if (containers.length !== 1) {
-        throw new Error('Начнем с того что ты пиздоглазое мудило')
+        throw new Error('Not unique identificator')
     }
 
     const container = containers[0];
