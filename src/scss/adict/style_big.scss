@@ -11,13 +11,13 @@
     border-radius: 44px;
   }
   .wrapper {
-    background: url(../assets/how_bg.svg), url(../assets/v_bg.svg), url(../assets/v_bg.svg), url(../assets/v_bg.svg), url(../assets/v_bg.svg), url(../assets/v_angled_bg.svg), url(../assets/v_angled_bg.svg);
+    background: url(../../assets/how_bg.svg), url(../../assets/v_bg.svg), url(../../assets/v_bg.svg), url(../../assets/v_bg.svg), url(../../assets/v_bg.svg), url(../../assets/v_angled_bg.svg), url(../../assets/v_angled_bg.svg);
     background-position: top 1475px left 0, top 450px right 36px, top 450px right 175px, bottom 3161px right -191px, bottom 2555px left 0, bottom 2364px left 0;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     background-size: 347px 419px, 679.25px 557.24px, 679.25px 557.24px, 679.25px 557.24px, 679.25px 557.24px, 611px 765.84px, 6114px 765.84px;
   }
   .group-automate {
-    background: url(../assets/automate_bg.svg);
+    background: url(../../assets/automate_bg.svg);
     background-position: top 20.5px right 83.57px;
     background-repeat: no-repeat;
     background-size: 348px 417px;
@@ -95,7 +95,7 @@
     background: variables.$gradient_light_horizontal;
   }
   .footer-background {
-    background: url(../assets/footer_bg.svg);
+    background: url(../../assets/footer_bg.svg);
     background-position: top 210px left -39px;
     background-repeat: no-repeat;
     background-size: 348px 417px;
