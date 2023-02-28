@@ -61,15 +61,20 @@ const slidersArray = [
     {containerSelector: '[data-slider-index="2"]',
     buttonsShow: true,
     content: [
-        `<div>Адаптивный лендинг</div>
-        <div><a href="./beautiesLife.html"><img src="Cover.jpg" alt="Обложка макета"></a></div>
+        `<div>Тестовое задание для диджитал агенства Adict</div>
+        <div><a href="adictLanding.html" onclick="event.stopPropagation()"><p>Сам лендинг</p></a></div>
         <div>
-            <a href="https://www.figma.com/file/hlGtAlnTJLrILDlmU8PezY/Website-Landing-Page-for-BeautiesLife-(Community)?node-id=1506%3A315">Макет в Figma</a>
+            Адаптивный лендинг, с проверкой форм на стороне клиента
         </div>`,
         `<div>Плагин создающий слайдеры на странице</div>
-        <div><a href="https://github.com/panteraink/sliderPlugin"><img src="sliderPlugin.png" alt="Слайдер на GitHub"></a></div>
+        <div><a href="https://github.com/panteraink/sliderPlugin" onclick="event.stopPropagation()"><img src="sliderPlugin.png" alt="Слайдер на GitHub"></a></div>
         <div>
             <a href="https://github.com/panteraink/sliderPlugin">Плагин на GitHub</a>
+        </div>`,
+        `<div>Адаптивный лендинг</div>
+        <div><a href="./beautiesLife.html" onclick="event.stopPropagation()"><img src="Cover.jpg" alt="Обложка макета"></a></div>
+        <div>
+            <a href="https://www.figma.com/file/hlGtAlnTJLrILDlmU8PezY/Website-Landing-Page-for-BeautiesLife-(Community)?node-id=1506%3A315">Макет в Figma</a>
         </div>`
     ]}
 ]
