@@ -62,7 +62,7 @@ const slidersArray = [
     buttonsShow: true,
     content: [
         `<div>Тестовое задание для диджитал агенства Adict</div>
-        <div><a href="./adictLanding.html" onclick="event.stopPropagation()"><p>Сам лендинг</p></a></div>
+        <div><a href="./adictLanding.html" onclick="event.stopPropagation()"><img src="adictCover.jpg" alt="Обложка макета"></a></div>
         <div>
             Адаптивный лендинг, с проверкой форм на стороне клиента
         </div>`,

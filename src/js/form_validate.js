@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (formValidate(form)) {
                 document.body.appendChild(imgFromWeb)
             } else if (!formValidate(form)) {
-                alert('Заполните подсвеченные поля')
+                
             }
         }
 
