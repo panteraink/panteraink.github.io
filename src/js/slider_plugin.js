@@ -3,8 +3,8 @@
 const plg = {};
 
 plg.sliderCreate = ({containerSelector, content, buttonsShow = true, slidesClass, buttonsClass, containerClass, slidesReverseOrder = false}) => {
-    let slideDirection = 'forward'
-    let slideCount = content.length
+    let slideDirection = 'forward';
+    let slideCount = content.length;
     let slideNumber = 0;
 
     function slideCreate(content) {
