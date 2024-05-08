@@ -67,6 +67,7 @@ hr {
     grid-template-rows: 100%;
   }
   .content {
+    max-height: fit-content;
     overflow: hidden;
   }
   .navigation {
