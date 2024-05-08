@@ -1,0 +1,11 @@
+body, #root {
+  width: 100%;
+  height: 100%;
+  font-family: Rubik;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin: 0;
+}
+html {
+  font-size: min( 2.5vh, 2.5vw);
+}
