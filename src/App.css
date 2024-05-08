@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: start;
+  justify-content: space-between;
   grid-row: 2;
 }
 h1 {
@@ -32,7 +32,7 @@ div {
 .content {
   padding: 1em 4em 2em 2em;
   min-height: 0;
-  max-height: calc(100svh - 11rem);
+  max-height: calc(100svh - 11.4rem);
   overflow: scroll;
 }
 ol {
@@ -73,7 +73,7 @@ hr {
   .navigation {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    justify-content: flex-start;
     grid-row: inherit;
   }
   div {

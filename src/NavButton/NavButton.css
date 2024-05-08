@@ -2,10 +2,10 @@
     background-color: #fff;
     border: none;
     width: 10em;
-    height: 4em;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 1em 0;
+    font-size: 1.2rem;
+    line-height: 3.5em;
+    font-weight: 600;
+    padding: 0;
 }
 .navButton:hover {
     background-color: #eee;
@@ -15,4 +15,14 @@
 .navButton.active {
     background-color: #000;
     color: #fff;
+}
+@media (min-width: 640px) {
+    .navButton {
+        background-color: #fff;
+        border: none;
+        width: 10em;
+        line-height: 4em;
+        font-size: 1rem;
+        font-weight: 500;
+    }
 }
